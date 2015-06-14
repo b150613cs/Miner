@@ -104,7 +104,10 @@
 
 (def click (board square)
   "'Click' on the given square. Reveal it. If it is a zero reveal all
-   of the squares around it."
+   of the squares around it. Returns a list of information. Each
+   element of that list is a two element list whose first element is
+   the point revealed and the second element is T if there was a mine
+   on that square."
   (accum a
     (let queue (list square)
       (while queue
